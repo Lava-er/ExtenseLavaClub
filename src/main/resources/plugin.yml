@@ -1,17 +1,17 @@
 ## CHANGE this to the name of your plugin.
-name: SlimefunAddon
+name: ExtenseLavaClub
 
 ## CHANGE this to your username.
-author: CHANGEME
+author: Lava_er
 
-## CHANGE this to a meaninful but short description of your plugin.
-description: A generic Slimefun4-Addon
+## CHANGE this to a meaningful but short description of your plugin.
+description: Some interesting items for my LAVAHOME Server
 
 ## CHANGE this to the path of the class that extends JavaPlugin.
-main: me.CHANGEME.slimefunaddon.ExampleAddon
+main: club.lava_er.extenselavaclub.ExtenseLavaClub
 
 ## You can change this to link to your website or repository. You can also remove this line if you want to.
-website: https://github.com/Slimefun/Addon-Template
+website: https://github.com/Lava-er/ExtenseLavaClub
 
 ## This value is automatically replaced by the version specified in your pom.xml file.
 ## Do not change this.
