@@ -1,5 +1,6 @@
 package club.lava_er.extenselavaclub;
 
+import club.lava_er.extenselavaclub.items.LavaSword;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -31,13 +32,23 @@ public class ExtenseLavaClub extends JavaPlugin implements SlimefunAddon {
 
         SlimefunItemStack itemStack = new SlimefunItemStack("A_SPECIAL_LAVA_BUCKET", Material.LAVA_BUCKET, "&a一个特别的岩浆桶", "", "&7热气腾腾...");
         ItemStack[] recipe = {
-                new ItemStack(Material.DIAMOND,16),    null,                               new ItemStack(Material.LAVA_CAULDRON,64),
+                new ItemStack(Material.DIAMOND,16),    null,                               new ItemStack(Material.BLAZE_POWDER,64),
                 null,                                           SlimefunItems.CARBONADO,    null,
                 new ItemStack(Material.BLAZE_POWDER,32),    null,                               new ItemStack(Material.DIAMOND,16)
         };
 
         SlimefunItem sfItem = new SlimefunItem(itemGroup, itemStack, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
         sfItem.register(this);
+
+        SlimefunItemStack LavaSword = new SlimefunItemStack("LAVA_SWORD", Material.GOLDEN_SWORD, "&a岩浆之剑", "", "&7右键有惊喜");
+        ItemStack[] LSrecipe = {
+                null,    new ItemStack(Material.BLAZE_POWDER,32),     null,
+                null,     new ItemStack(Material.BLAZE_POWDER,32),    null,
+                null ,    new ItemStack(Material.BLAZE_ROD,16),    null
+        };
+
+        LavaSword LSItem = new LavaSword(itemGroup, LavaSword, RecipeType.ENHANCED_CRAFTING_TABLE, LSrecipe);
+        LSItem.register(this);
 
         /*
          * 1. Creating a new Category
